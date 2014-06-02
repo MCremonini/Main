@@ -76,3 +76,22 @@ int HiBitCounting( int x )
 		x &= x-1;
 	return count;
 }
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+// make a string uppercase
+//
+//////////////////////////////////////////////////////////////////////////
+void MakeUpper( char *sString )
+{
+	int nLen = strlen( sString );
+	int iOffs = 'a' - 'A';
+	for( int i = 0; i < nLen; i++ )
+	{
+		if( sString[i] >= 'a' && sString[i] <= 'z' )
+		{
+			sString[i] -= iOffs;
+		}
+	}
+}
